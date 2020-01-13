@@ -52,11 +52,6 @@ args = parser.parse_args()
 
 torch.random.manual_seed(42)
 
-if args.cuda:
-    net.cuda()
-    print("Using CUDA")
-else:
-    print("Using CPU")
 
 ###############################################################################
 # PART B; compute cluster labels on hub data points by using SGSC (spectral 
@@ -161,6 +156,13 @@ T = np.c_[t_hub, tu_train]
 
 net = Net()
 net.train()
+
+
+if args.cuda:
+    net.cuda()
+    print("Using CUDA")
+else:
+    print("Using CPU")
 
 # define optimizer
 optimizer = torch.optim.Adam(net.parameters(),lr=args.learning_rate)
