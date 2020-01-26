@@ -32,7 +32,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from utils import *
 from data import *
-
+from model import Net
 
 parser = argparse.ArgumentParser()
 

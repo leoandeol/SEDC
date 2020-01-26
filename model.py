@@ -7,7 +7,7 @@ Created on Mon Jan 13 20:14:28 2020
 """
 
 import torch.nn as nn
-import torch.nn.functionnal as F
+import torch.nn.functional as F
 
 # define structure of deep neural net 
 class Net(nn.Module):
